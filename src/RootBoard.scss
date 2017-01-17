@@ -1,0 +1,53 @@
+$item-size: 5vmin;
+$board-size: calc(#{$item-size}*15);
+
+.board {
+  width: $board-size;
+  height: $board-size;
+
+  min-width: $board-size;
+  min-height: $board-size;
+  background-color: burlywood;
+  padding: 5vmin;
+  > div {
+    position: relative;
+  }
+  font-family: monospace;
+}
+
+.holes, .pegs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.column {
+  display: inline-block;
+  min-width: $item-size;
+  min-height: $item-size;
+  max-width: $item-size;
+  max-height: $item-size;
+}
+
+.holes {
+  color: saddlebrown;
+  font-size: 3vmin;
+}
+
+
+.pegs {
+  color: red; //burlywood;
+  opacity: .5;
+  font-size: 8vmin;
+  line-height:  .5;
+
+  .column {
+    cursor: grab;
+  }
+}
+
