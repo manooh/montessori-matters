@@ -32,6 +32,12 @@ $board-size: calc(#{$item-size}*15);
   min-height: $item-size;
   max-width: $item-size;
   max-height: $item-size;
+  vertical-align: middle;
+  padding-top: .5vmin;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
 .holes {
@@ -41,8 +47,6 @@ $board-size: calc(#{$item-size}*15);
 
 
 .pegs {
-  color: red; //burlywood;
-  opacity: .5;
   font-size: 8vmin;
   line-height:  .5;
 
