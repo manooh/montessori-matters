@@ -28,7 +28,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Montessori Matters</h2>
         </div>
-        <PegSelector setNewPegsState={this.setNewPegsState}/>
+        <PegSelector pegState={this.state.newPegsState} setNewPegsState={this.setNewPegsState}/>
         <RootBoard newPegsState={this.state.newPegsState}/>
       </div>
     );
