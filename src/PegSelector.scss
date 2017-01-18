@@ -1,10 +1,28 @@
 .peg-choices {
+  vertical-align: middle;
+  margin: auto;
+
   &>div {
     float: left;
-    padding-right: 2vmin;
   }
-  &>div:last-child:after {
-    clear:both;
+
+  &>div:first-child {
+    padding: 1vmin;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    display: inline-block;
+    width:  5vmin;
+    height: 5vmin;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: lightgray;
   }
 }
 
@@ -12,4 +30,8 @@
     content:'';
     display:block;
     clear: both;
+}
+
+label {
+  font-size: 200%;
 }

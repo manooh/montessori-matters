@@ -31,4 +31,5 @@ Peg.propTypes = {
   pegState:    PropTypes.string.isRequired,
   setPegState: PropTypes.func.isRequired
 };
+
 export default Peg;

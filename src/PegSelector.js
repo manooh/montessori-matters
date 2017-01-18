@@ -26,21 +26,22 @@ class PegSelector extends Component {
     return (
       <div className="peg-selector">
         <form className="peg-choices">
+          <div>Select color: </div>
           <div>
             <input type="radio" name="pegType" id="red" value="r" onChange={this.handleCheck.bind(this)} checked={(this.props.pegState === 'r')} />
-            <label htmlFor="red">red</label>
+            <label htmlFor="red" className="red">&#9679;</label>
           </div>
           <div>
             <input type="radio" name="pegType" id="blue" value="b" onChange={this.handleCheck.bind(this)} checked={(this.props.pegState === 'b')} />
-            <label htmlFor="blue">blue</label>
+            <label htmlFor="blue" className="blue">&#9679;</label>
           </div>
           <div>
             <input type="radio" name="pegType" id="green" value="g" onChange={this.handleCheck.bind(this)} checked={(this.props.pegState === 'g')}/>
-            <label htmlFor="green">green</label>
+            <label htmlFor="green" className="green">&#9679;</label>
           </div>
           <div>
             <input type="radio" name="pegType" id="remove" value="x" onChange={this.handleCheck.bind(this)} checked={(this.props.pegState === 'x')} />
-            <label htmlFor="remove">remove</label>
+            <label htmlFor="remove"className="remove">&#10006;</label>
           </div>
         </form>
       </div>
