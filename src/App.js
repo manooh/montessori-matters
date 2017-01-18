@@ -28,8 +28,11 @@ class App extends Component {
         <div className="App-header">
           <h2>Montessori Matters</h2>
         </div>
-        <PegSelector pegState={this.state.newPegsState} setNewPegsState={this.setNewPegsState}/>
-        <RootBoard newPegsState={this.state.newPegsState}/>
+        <div className="content">
+          <h3>Small Square Root Board</h3>
+          <PegSelector pegState={this.state.newPegsState} setNewPegsState={this.setNewPegsState}/>
+          <RootBoard newPegsState={this.state.newPegsState}/>
+        </div>
       </div>
     );
   }
