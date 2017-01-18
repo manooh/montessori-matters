@@ -1,0 +1,15 @@
+.peg-choices {
+  &>div {
+    float: left;
+    padding-right: 2vmin;
+  }
+  &>div:last-child:after {
+    clear:both;
+  }
+}
+
+.peg-choices:after {
+    content:'';
+    display:block;
+    clear: both;
+}

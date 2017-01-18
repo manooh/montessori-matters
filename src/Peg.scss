@@ -3,6 +3,12 @@
 .green { color: green; }
 .unset { color: rgba(0, 0, 0, 0); }
 
-.peg {
-
+.peg-choices {
+  &>div {
+    float: left;
+    padding-right: 2vmin;
+  }
+  input[type="radio"] {
+    background-color: aquamarine;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './RootBoard.scss';
 
 import Peg from './Peg';
@@ -22,9 +22,9 @@ class RootBoard extends Component {
     };
   }
 
-  setPegState(r, c, state) {
+  setPegState(r, c) {
     let states = this.state.pegStates;
-    states[r][c] = state;
+    states[r][c] = this.props.newPegsState;
     this.setState({ pegStates: states });
   }
 
@@ -57,5 +57,9 @@ class RootBoard extends Component {
     );
   }
 }
+RootBoard.propTypes = {
+  newPegsState: PropTypes.string.isRequired
+};
+
 
 export default RootBoard;
