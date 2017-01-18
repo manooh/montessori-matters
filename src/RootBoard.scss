@@ -17,11 +17,12 @@ $board-size: calc(#{$item-size}*15 + 2px);
   position: absolute;
   top: 0;
   left: 0;
-  display: table;
 }
 
 .row {
-  display: table-row;
+  text-overflow: clip;
+  overflow: hidden;
+  max-height: $item-size;
 }
 
 .column {
@@ -49,7 +50,7 @@ $board-size: calc(#{$item-size}*15 + 2px);
   line-height:  .5;
 
   .column {
-    cursor: grab;
+    cursor: pointer;
   }
 }
 
