@@ -13,8 +13,13 @@ class App extends Component {
     this.setNewPegsState = this.setNewPegsState.bind(this);
 
     this.state = {
+      toClear:      false,
       newPegsState: 'x'
     };
+  }
+
+  setClearAll(clearAll) {
+    this.setState({toClear: clearAll});
   }
 
   setNewPegsState(state) {
@@ -30,8 +35,8 @@ class App extends Component {
         </div>
         <div className="content">
           <h3>Small Square Root Board</h3>
-          <PegSelector pegState={this.state.newPegsState} setNewPegsState={this.setNewPegsState}/>
-          <RootBoard newPegsState={this.state.newPegsState}/>
+          <PegSelector pegState={this.state.newPegsState} setNewPegsState={this.setNewPegsState} clearAll={this.setClearAll.bind(this, true)}/>
+          <RootBoard newPegsState={this.state.newPegsState} toClear={this.state.toClear} clearDone={this.setClearAll.bind(this, false)}/>
         </div>
       </div>
     );

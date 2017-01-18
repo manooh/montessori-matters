@@ -11,15 +11,24 @@ class RootBoard extends Component {
     super(props);
 
     this.setPegState = this.setPegState.bind(this);
+    this.clearAll    = this.clearAll.bind(this);
 
+    this.state = {
+      pegStates: this.getClearedPegs()
+    };
+  }
+
+  getClearedPegs() {
     let states = [];
     for (var r = 0; r < cSize; r++) {
       let chars = 'x'.repeat(cSize);
       states[r] = chars.split('');
     }
-    this.state = {
-      pegStates: states
-    };
+    return states;
+  }
+
+  clearAll() {
+    this.setState({ pegStates: this.getClearedPegs() });
   }
 
   setPegState(r, c) {
@@ -27,6 +36,14 @@ class RootBoard extends Component {
     states[r][c] = this.props.newPegsState;
     this.setState({ pegStates: states });
   }
+
+  componentWillReceiveProps(props) {
+    if (props.toClear === true) {
+      this.clearAll();
+      this.props.clearDone();
+    }
+  }
+
 
   render() {
     var holes = [];
@@ -58,7 +75,9 @@ class RootBoard extends Component {
   }
 }
 RootBoard.propTypes = {
-  newPegsState: PropTypes.string.isRequired
+  newPegsState: PropTypes.string.isRequired,
+  toClear:      PropTypes.bool.isRequired,
+  clearDone:    PropTypes.func.isRequired
 };
 
 

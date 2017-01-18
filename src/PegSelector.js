@@ -8,7 +8,6 @@ class PegSelector extends Component {
   }
 
   handleKey(e) {
-
     if ('xrbg'.includes(e.key)) {
       this.props.setNewPegsState(e.key);
     }
@@ -21,6 +20,7 @@ class PegSelector extends Component {
   componentWillUnount() {
     document.removeEventListener('keypress', this.handleKey.bind(this));
   }
+
 
   render() {
     return (
@@ -43,6 +43,9 @@ class PegSelector extends Component {
             <input type="radio" name="pegType" id="remove" value="x" onChange={this.handleCheck.bind(this)} checked={(this.props.pegState === 'x')} />
             <label htmlFor="remove"className="remove">&#10006;</label>
           </div>
+          <div>
+            <a href="#" onClick={ (e) => { e.preventDefault(); this.props.clearAll(); } } >Clear All</a>
+          </div>
         </form>
       </div>
     );
@@ -50,7 +53,8 @@ class PegSelector extends Component {
 }
 PegSelector.propTypes = {
   setNewPegsState: PropTypes.func.isRequired,
-  pegState:        PropTypes.string.isRequired
+  pegState:        PropTypes.string.isRequired,
+  clearAll:        PropTypes.func.isRequired
 };
 
 export default PegSelector;
