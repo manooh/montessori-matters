@@ -1,6 +1,5 @@
 .peg-choices {
-  vertical-align: middle;
-  margin: auto;
+  position: relative;
 
   &>div {
     float: left;
@@ -8,6 +7,8 @@
 
   &>div:first-child {
     padding: 1vmin;
+    top: 50%;
+    left: 1vmin;
   }
 
   input[type="radio"] {
@@ -16,9 +17,14 @@
 
   input[type="radio"] + label {
     display: inline-block;
-    width:  5vmin;
-    height: 5vmin;
+    width:  6vmin;
+    height: 6vmin;
+    max-width:  6vmin;
+    max-height: 6vmin;
+    font-size: 6vmin;
     cursor: pointer;
+    text-overflow: clip;
+    overflow: hidden;
   }
 
   input[type="radio"]:checked + label {
