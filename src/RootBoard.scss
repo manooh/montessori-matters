@@ -1,12 +1,10 @@
 $item-size: 5vmin;
-$board-size: calc(#{$item-size}*15);
+$board-size: calc(#{$item-size}*15 + 2px);
 
 .board {
   width: $board-size;
   height: $board-size;
 
-  min-width: $board-size;
-  min-height: $board-size;
   background-color: burlywood;
   padding: 5vmin;
   > div {
