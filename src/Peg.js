@@ -21,7 +21,7 @@ class Peg extends Component {
 
     return (
 
-      <span className={'column peg ' + pegType} onClick={() => this.props.setPegState(this.props.row, this.props.column)}>&#9679; </span>
+      <div className='column peg' onClick={() => this.props.setPegState(this.props.row, this.props.column)}><span className={pegType}></span> </div>
     );
   }
 }

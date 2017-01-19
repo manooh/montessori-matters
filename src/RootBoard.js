@@ -53,7 +53,7 @@ class RootBoard extends Component {
       let holeRow = [];
       let pegRow  = [];
       for (var c = 0; c < cSize; c++) {
-        holeRow.push(<span className='column' key={'holes-'+r+'-'+c}>&#9679; </span>);
+        holeRow.push(<div className='column hole' key={'holes-'+r+'-'+c}><span></span></div>);
         pegRow.push( <Peg key={'pegs-'+r+'-'+c} row={r} column={c} pegState={this.state.pegStates[r][c]} setPegState={this.setPegState}/>);
       }
       holes.push(<div className='row' key={'holes-'+r}>{holeRow}</div>);

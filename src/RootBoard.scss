@@ -26,29 +26,30 @@ $board-size: calc(#{$item-size}*15 + 2px);
 }
 
 .column {
-  display: inline-block;
-  min-width: $item-size;
+  min-width:  $item-size;
   min-height: $item-size;
-  max-width: $item-size;
-  max-height: $item-size;
-  vertical-align: middle;
-  padding-top: .5vmin;
+  width:      $item-size;
+  height:     $item-size;
+  display:    inline-block;
   box-sizing: border-box;
-  vertical-align: middle;
-  text-overflow: clip;
-  overflow: hidden;
+
+  &>span {
+    border-radius: 50%;
+    min-width:  100%;
+    min-height: 100%;
+    display:    inline-block;
+  }
 }
 
-.holes {
-  color: saddlebrown;
-  font-size: 3vmin;
+.hole {
+  &>span {
+    background-color: saddlebrown;
+  }
+  padding:    2vmin;
 }
 
 
 .pegs {
-  font-size: 8vmin;
-  line-height:  .5;
-
   .column {
     cursor: pointer;
   }

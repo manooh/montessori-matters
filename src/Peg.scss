@@ -1,5 +1,8 @@
-.red   { color: red; }
-.blue  { color: blue; }
-.green { color: green; }
-.unset { color: rgba(0, 0, 0, 0); }
+.red   { background-color: red; }
+.blue  { background-color: blue; }
+.green { background-color: green; }
+.unset { background-color: none; }
 
+.peg {
+  padding: .5vmin;
+}
