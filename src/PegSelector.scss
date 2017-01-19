@@ -5,37 +5,33 @@
     float: left;
   }
 
-  &>div:first-child, &>div:last-child {
-    padding: 1vmin;
+  div.clear-all {
+    float: right;
   }
 
   input[type="radio"] {
     display: none;
-  }
 
-  input[type="radio"] + label {
-    display: inline-block;
-    width:  6vmin;
-    height: 6vmin;
-    max-width:  6vmin;
-    max-height: 6vmin;
-    font-size: 6vmin;
-    cursor: pointer;
-    text-overflow: clip;
-    overflow: hidden;
+    &:checked + label {
+      background-color: lightgray;
+    }
   }
-
-  input[type="radio"]:checked + label {
-    background-color: lightgray;
+  &:after {
+      content:'';
+      display:block;
+      clear: both;
   }
 }
 
-.peg-choices:after {
-    content:'';
-    display:block;
-    clear: both;
+label.remove, div.desc-text, .clear-all {
+  display: inline-block;
+  min-width: 5vmin;
+  height: 5vmin;
+  line-height: 5vmin;
 }
 
-label {
-  font-size: 200%;
+div.desc-text {
+  margin-right: 2vmin;
 }
+
+
