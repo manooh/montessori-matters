@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EuCookies from 'reactjs-eu-cookies';
 import './App.scss';
 
 
@@ -30,6 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <EuCookies />
         <div className="App-header">
           <h2>Montessori Matters</h2>
         </div>
